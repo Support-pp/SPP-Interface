@@ -11,3 +11,12 @@
  * Date: 03.07.18 19:42
  * Project: Support++ Webinterface
  */
+html {
+  height: 100%;
+  body {
+    min-height: 100%;
+    a.disabled {
+      opacity: .6;
+    }
+  }
+}
