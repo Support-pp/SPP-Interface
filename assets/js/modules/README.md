@@ -13,7 +13,7 @@ Waves is licensed under the terms of the [MIT License](https://github.com/fians/
 wow.JS is for our purpose licensed under the terms of the [GPLv3](https://github.com/matthieua/WOW#open-source-license)
 
 ---
-We couldn't find the licenses of the following to modules:
+We couldn't find the licenses of the following two modules:
 - Forms Free
 - Scrolling Navbar
 
