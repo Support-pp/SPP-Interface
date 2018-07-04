@@ -14,9 +14,8 @@ We use JQuery to simplify the work with JavaScript. JQuery is licensed under the
 ## Popper
 Bootstrap require Popper.JS so we use it together with Bootstrap and it is licensed under the terms of the [MIT License](https://github.com/FezVrasta/popper.js/blob/master/LICENSE.md) as well.
 
-
-## Masonry
-We use Masonry to create a fluid grid that the container fit spaces. Masonry is licensed under the terms of the [MIT License](https://desandro.mit-license.org/).
+## jKanban
+We use jKanban to let you drag and drop tickets between states. jKanban is licensed under the terms of the [Apache License 2.0](https://github.com/riktar/jkanban/blob/master/LICENSE)
 
 ---
 Everything else is licensed under the terms which can be found in the [LICENSE.md](LICENSE.md).

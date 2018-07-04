@@ -8,5 +8,8 @@ Bootstrap is licensed under the terms of the [MIT License](https://github.com/tw
 To get a nice and modern look we use the Bootstrap extension MDBootstrap to get Material Design into Bootstrap.
 MDBootstrap is licensed under the terms of the [MIT License](https://mdbootstrap.com/license/)
 
+## jKanban
+We use jKanban to let you drag and drop tickets between states. jKanban is licensed under the terms of the [Apache License 2.0](https://github.com/riktar/jkanban/blob/master/LICENSE)
+
 ---
 Everything else is licensed under the terms which can be found in the [LICENSE.md](LICENSE.md).
