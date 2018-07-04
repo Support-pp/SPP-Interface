@@ -1,0 +1,201 @@
+<!--
+  ~ Created by: Support++
+  ~ Date: 03.07.18 21:28
+  ~ Project: Support++ Webinterface
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Support++">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/assets/css/mdb.min.css" rel="stylesheet">
+    <!-- jKanban -->
+    <link href="/assets/css/jkanban.min.css" rel="stylesheet">
+    <!-- Your custom styles -->
+    <link href="/assets/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Content -->
+<!-- Version Info -->
+<div class="container-fluid warning-color-dark white-text font-weight-bold py-2">
+    <div class="row">
+        <div class="col-12 text-center">Please update to our latest stable version {VERSION}
+            <a href="https://github.com/Support-pp/Support-pp/releases/latest" target="_blank _parent" class="btn btn-indigo white-text btn-sm ml-3">
+                <i class="fas fa-download mr-2" aria-hidden="true"></i><strong>New Release</strong>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /Version Info -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark unique-color-dark">
+    <a href="https://support-pp.de/" class="navbar-brand px-lg-4 mr-0 white-text"><img src="/assets/img/icon.png" height="30" alt=""/><span
+            class="d-inline d-lg-none"> Support++</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headNav" aria-controls="headNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="headNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="tickets.html" class="nav-link">Tickets <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
+            <li class="nav-item"><a href="info.html" class="nav-link"><i class="fas fa-info"></i> Info</a></li>
+            <li class="nav-item"><a href="#" class="nav-link disabled"><i class="far fa-life-ring"></i> Remote Help</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- /Navigation -->
+
+<!-- Ticket View -->
+<div class="modal fade right" id="ticketView" tabindex="-1" role="dialog" aria-labelledby="ticketLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-right modal-notify modal-info modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header indigo align-items-center">
+                <p class="heading lead"><i class="fas fa-eye"></i> Ticket View</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">×</span>
+                </button>
+            </div>
+            <div class="modal-body rgba-grey-slight" style="flex: 0 2 auto">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="md-form form-sm">
+                                <i class="fas fa-calendar prefix"></i>
+                                <input type="text" id="ticketDate" class="form-control form-control-sm disabled" value="04.06.2018" disabled>
+                                <label for="ticketDate">Datum</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form form-sm">
+                                <i class="fas fa-user prefix"></i>
+                                <input type="text" id="ticketUser" class="form-control form-control-sm disabled" value="Lapotor" disabled>
+                                <label for="ticketUser">Username</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form form-sm">
+                                <input type="text" id="ticketUUID" class="form-control form-control-sm disabled" value="AnIPNogEh9EYbWIRF3KflpzsO8A=" disabled>
+                                <label for="ticketUUID">UUID</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="md-form form-sm">
+                                <i class="fas fa-th-list prefix"></i>
+                                <input type="text" id="ticketTopic" class="form-control form-control-sm disabled" value="Example Topic should be long" disabled>
+                                <label for="ticketTopic">Topic</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <div class="btn-group ">
+                                <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Medium
+                                </button>
+                                <div class="dropdown-menu py-0">
+                                    <a class="dropdown-item danger-color" href="#">High</a>
+                                    <a class="dropdown-item warning-color-dark" href="#">Medium</a>
+                                    <a class="dropdown-item default-color" href="#">Low</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body indigo">
+                <div class="container-fluid white-text">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Ticket</h3>
+                            <div class="md-form white-textarea active-white-textarea-2">
+                                <i class="fas fa-ticket-alt prefix rotate-45"></i>
+                                <textarea data-adaptheight type="text" id="ticketInit" class="md-textarea form-control pb-1" rows="5">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</textarea>
+                                <label for="ticketInit">Ticket Message</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Ticket View -->
+
+<!-- Kanban -->
+
+<div id="Tickets"></div>
+
+<!-- /Kanban -->
+<!-- /Content -->
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+<!-- jKanban -->
+<script type="text/javascript" src="/assets/js/jkanban.js"></script>
+<script type="text/javascript">
+    let KanbanTest = new jKanban({
+        element: '#Tickets',
+        gutter: '1rem',
+        widthBoard: '440px',
+        responsivePercentage: true,
+        addItemButton: false,
+        dragBoards: false,
+        boards: [
+            {
+                "id": "open_tickets",
+                "title": "Open Tickets",
+                "class": "amber,dark-text",
+                "item": [
+                    {
+                        "id": "ticket-1",
+                        "title": "Ticket 1 <span class=\"badge badge-warning float-right\">Medium</span>"
+                    },
+                    {
+                        "id": "ticket-2",
+                        "title": "Ticket 2<span class=\"badge badge-info float-right\">Low</span>"
+                    }
+                ]
+            },
+            {
+                "id": "progress_tickets",
+                "title": "Tickets in progress",
+                "class": "indigo,white-text",
+            },
+            {
+                "id": "closed_tickets",
+                "title": "Closed Tickets",
+                "class": "success-color-dark,white-text",
+            }
+        ],
+        click: function (el) {
+            $('#ticketView').modal('show');
+        }
+    })
+</script>
+
+<!-- Custom -->
+<script type="text/javascript">
+    $('#ticketInit').autoResize();
+</script>
+</body>
+
+</html>

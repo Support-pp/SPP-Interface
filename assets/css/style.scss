@@ -11,6 +11,7 @@
  * Date: 03.07.18 19:42
  * Project: Support++ Webinterface
  */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
 html {
   height: 100%;
   body {
@@ -25,6 +26,84 @@ html {
     }
     .wow {
       visibility: hidden;
+    }
+    ul.arrow-cycle-list {
+      padding-left: 20px;
+      list-style: none;
+      li {
+        &:not(.list-unstyled)::before {
+          font-family: 'Font Awesome 5 Free';
+          content: '\f0a9';
+          color: #3f51b5;
+          font-weight: 900;
+          margin: 0 5px 0 -15px;
+        }
+        &.list-unstyled {
+          padding-left: 10px;
+        }
+        a {
+          color: #1C2331;
+          &:hover {
+            color: #3F729B;
+          }
+        }
+      }
+    }
+    .card .card-body .card-code {
+      font-family: 'Ubuntu Mono', monospace;
+      padding: 0.4rem 0.75rem;
+      background-color: rgba(158, 158, 158, 0.1);
+      border: rgba(158, 158, 158, 0.3) solid 1px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+      }
+    }
+    .rotate-45 {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .white-textarea textarea.md-textarea:focus:not([readonly]) {
+      border-bottom: 1px solid #fff;
+      box-shadow: 0 1px 0 0 #fff;
+    }
+    .active-white-textarea.md-form label.active {
+      color: #fff;
+    }
+    .active-white-textarea-2{
+      textarea.md-textarea {
+        border-bottom: 1px solid #fff;
+        box-shadow: 0 1px 0 0 #fff;
+        color: #ffffff;
+      }
+      &.md-form {
+        i.prefix.active{
+          color: #fff;
+        }
+        label {
+          color: #fff;
+          &.active {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .md-form{
+      .suffix {
+        position: absolute;
+        top: .25rem;
+        right: 0;
+        font-size: 1.75rem;
+      }
+      .suffix ~ input, .suffix ~ textarea {
+        margin-right: 2.5rem;
+        width: -webkit-calc(100% - 2.5rem);
+        width: calc(100% - 2.5rem);
+      }
     }
   }
 }
