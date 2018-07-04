@@ -32,6 +32,19 @@
 <body>
 
 <!-- Content -->
+<!-- Version Info -->
+<div class="container-fluid warning-color-dark white-text font-weight-bold py-2">
+    <div class="row">
+        <div class="col-12 text-center">Please update to our latest stable version {VERSION}
+            <a href="https://github.com/Support-pp/Support-pp/releases/tag/{VERSION}" target="_blank _parent" class="btn btn-indigo white-text btn-sm ml-3">
+                <i class="fas fa-download mr-2" aria-hidden="true"></i><strong>New Release</strong>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /Version Info -->
+
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark unique-color-dark">
     <a href="https://support-pp.de/" class="navbar-brand px-lg-4 mr-0 white-text"><img src="/assets/img/icon.png" height="30" alt=""/><span
             class="d-inline d-lg-none"> Support++</span></a>
@@ -42,19 +55,21 @@
 
     <div class="collapse navbar-collapse" id="headNav">
         <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
             <li class="nav-item"><a href="#" class="nav-link">Tickets</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
+            <li class="nav-item"><a href="info.html" class="nav-link"><i class="fas fa-info"></i> Info</a></li>
             <li class="nav-item"><a href="#" class="nav-link disabled"><i class="far fa-life-ring"></i> Remote Help</a></li>
         </ul>
     </div>
 </nav>
+<!-- /Navigation -->
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4">
-            <div class="card my-4 pulse animated infinite">
-                <div class="card-header purple white-text">Pro</div>
+        <div class="col-md-4">
+            <div class="card my-4 wow fadeInUp">
+                <div class="card-header indigo white-text">Pro</div>
                 <div class="card-body">
                     <h4 class="card-title">Why PRO ?</h4>
                     <p class="card-text">
@@ -62,10 +77,13 @@
                         diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
                         dolor sit amet.
                     </p>
-                    <a class="btn btn-purple">Get PRO</a>
+                    <div class="btn-group" role="group" aria-label="Pro Version">
+                        <a class="btn btn-indigo">Get PRO</a>
+                        <a class="btn btn-indigo">Donate</a>
+                    </div>
                 </div>
             </div>
-            <div class="card mt-4">
+            <!--<div class="card mt-4 wow fadeInUp delay-5">
                 <div class="card-header indigo white-text">Pro</div>
                 <div class="card-body">
                     <h4 class="card-title">Why PRO ?</h4>
@@ -76,34 +94,45 @@
                     </p>
                     <a class="btn btn-indigo">Get PRO</a>
                 </div>
-            </div>
+            </div>-->
         </div>
-        <div class="col-8">
-            <div class="card mt-4 mh-100">
-                <div class="card-header deep-purple white-text">Information</div>
+        <div class="col-md-8">
+            <div class="card mt-4 wow fadeInUp">
+                <div class="card-header indigo white-text">Information</div>
                 <div class="card-body">
-                    <h4 class="card-title">Why PRO ?</h4>
+                    <h4 class="card-title">Informations</h4>
                     <p class="card-text">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
                         diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                        dolor sit amet.
+                        dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                        est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-                    <a class="btn btn-deep-purple">Get PRO</a>
+                    <p class="card-text">
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
+                        eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
+                        dolor sit amet,
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /Content -->
+</div>
+<!-- /Content -->
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+<script type="text/javascript">
+    new WOW().init();
+</script>
 </body>
-
 </html>

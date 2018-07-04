@@ -18,5 +18,13 @@ html {
     a.disabled {
       opacity: .6;
     }
+    .delay-5 {
+      -webkit-animation-delay: 500ms;
+      -moz-animation-delay: 500ms;
+      animation-delay: 500ms;
+    }
+    .wow {
+      visibility: hidden;
+    }
   }
 }
