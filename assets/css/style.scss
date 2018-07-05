@@ -5,13 +5,13 @@
  * as published by Sam Hocevar. See the LICENSE file or http://www.wtfpl.net/
  * for more details.
  */
-
 /*!
  * Created by: Support++
  * Date: 03.07.18 19:42
  * Project: Support++ Webinterface
  */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
+
 html {
   height: 100%;
   body {
@@ -67,21 +67,21 @@ html {
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
     }
-    .white-textarea textarea.md-textarea:focus:not([readonly]) {
+    .user-textarea textarea.md-textarea:focus:not([readonly]) {
       border-bottom: 1px solid #fff;
       box-shadow: 0 1px 0 0 #fff;
     }
-    .active-white-textarea.md-form label.active {
+    .active-user-textarea.md-form label.active {
       color: #fff;
     }
-    .active-white-textarea-2{
+    .active-user-textarea-2 {
       textarea.md-textarea {
         border-bottom: 1px solid #fff;
         box-shadow: 0 1px 0 0 #fff;
         color: #ffffff;
       }
       &.md-form {
-        i.prefix.active{
+        i.prefix.active {
           color: #fff;
         }
         label {
@@ -92,7 +92,7 @@ html {
         }
       }
     }
-    .md-form{
+    .md-form {
       .suffix {
         position: absolute;
         top: .25rem;
@@ -105,5 +105,27 @@ html {
         width: calc(100% - 2.5rem);
       }
     }
+    .collapse-btn {
+      margin: 0 0 0 -1.85rem;
+      transition: 500ms ease;
+      padding: 0 5.72px;
+      box-shadow: none;
+      background-color: #dcdcdc;
+      color: #000;
+      &.unshown {
+        transition: 500ms ease;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
   }
+}
+
+// IDs
+#ticketUserInfo div[class^='col-'] {
+  padding-left: 0;
+  margin-bottom: .25rem;
 }
