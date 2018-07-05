@@ -12,4 +12,4 @@ MDBootstrap is licensed under the terms of the [MIT License](https://mdbootstrap
 We use jKanban to let you drag and drop tickets between states. jKanban is licensed under the terms of the [Apache License 2.0](https://github.com/riktar/jkanban/blob/master/LICENSE)
 
 ---
-Everything else is licensed under the terms which can be found in the [LICENSE.md](LICENSE.md).
+Everything else is licensed under the terms which can be found in the [LICENSE.md](/LICENSE.md).
