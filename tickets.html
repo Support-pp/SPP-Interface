@@ -75,9 +75,9 @@
                         <div class="col-md-8">
                         </div>
                         <div class="col-md-4">
-                            <div class="container-fluid">
+                            <div class="container-fluid" id="#ticketOverview">
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-12 inbox-p0">
                                         <div class="align-items-center">
                                             <button class="btn collapse-btn" id="ticketUser" type="button" data-toggle="collapse"
                                                     data-target="#ticketUserInfo" aria-expanded="false" aria-controls="ticketUserInfo">
@@ -97,6 +97,29 @@
                                                         </div>
                                                         <div class="col-4 grey-text">Creator:</div>
                                                         <div class="col-8">Lapotor</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 inbox-p0 mt-2">
+                                        <div class="align-items-center">
+                                            <button class="btn collapse-btn" id="ticketInfo" type="button" data-toggle="collapse"
+                                                    data-target="#ticketInfoInfo" aria-expanded="false" aria-controls="ticketInfoInfo">
+                                                <i class="fas fa-angle-down"></i>
+                                            </button>
+                                            <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">Information</h6>
+                                        </div>
+                                        <div class="collapse show" id="ticketInfoInfo">
+                                            <div class="mt-0">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-4 grey-text">Topic:</div>
+                                                        <div class="col-8">
+                                                            Example
+                                                        </div>
+                                                        <div class="col-4 grey-text">Label:</div>
+                                                        <div class="col-8">Medium</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -178,6 +201,11 @@
         $('#ticketUser').addClass("unshown");
     }).on('show.bs.collapse', function () {
         $('#ticketUser').removeClass("unshown");
+    });
+    $('#ticketInfoInfo').on('hide.bs.collapse', function () {
+        $('#ticketInfo').addClass("unshown");
+    }).on('show.bs.collapse', function () {
+        $('#ticketInfo').removeClass("unshown");
     });
 </script>
 </body>
