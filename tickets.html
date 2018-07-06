@@ -120,7 +120,7 @@
                                                 data-target="#ticketAnswerFull1" aria-expanded="false" aria-controls="ticketAnswerFull1">
                                             <i class="fas fa-angle-down"></i>
                                         </button>
-                                        <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">Lapotor hat geantwortet - 04.08.2018 00:21 AM</h6>
+                                        <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">{USER} has answered - {DATE} {TIME}</h6>
                                         <h6 class="d-inline-block float-right"><span class="badge badge-default float-right">Creator</span></h6>
                                         <div class="collapse show" id="ticketAnswerFull1">
                                             <div class="mt-0">
@@ -147,7 +147,7 @@
                                                 data-target="#ticketAnswerFull2" aria-expanded="false" aria-controls="ticketAnswerFull2">
                                             <i class="fas fa-angle-down"></i>
                                         </button>
-                                        <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">VerHext hat geantwortet - 04.08.2018 00:21 AM</h6>
+                                        <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">{USER} has answered - {DATE} {TIME}</h6>
                                         <h6 class="d-inline-block float-right"><span class="badge badge-secondary float-right">Assignee</span></h6>
                                         <div class="collapse show" id="ticketAnswerFull2">
                                             <div class="mt-0">
@@ -170,10 +170,10 @@
                                         </div>
                                     </div>
                                     <div class="col-12 mt-3 pl-0">
-                                        <h4>Antworten:</h4>
+                                        <h4>Reply:</h4>
                                     </div>
                                     <div class="col-12 px-0">
-                                        <div class="tinymce">
+                                        <div class="tinymce" id="replyEdit">
                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
                                                 gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -189,7 +189,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 mt-1">
-                                        <button type="button" class="btn btn-success float-right" onclick="test()">Antworten <i class="fas fa-paper-plane fa-lg"></i></button>
+                                        <button type="button" class="btn btn-success float-right" onclick="test()">Reply <i class="fas fa-paper-plane fa-lg"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -210,12 +210,12 @@
                                                 <div class="container-fluid inbox-p0">
                                                     <div class="row">
                                                         <div class="col-4 grey-dark-text">Assignee:</div>
-                                                        <div class="col-8">Lapotor</div>
+                                                        <div class="col-8">{ASSIGNEE}</div>
                                                         <div class="col-4 grey-dark-text">Creator:</div>
-                                                        <div class="col-8">Lapotor</div>
+                                                        <div class="col-8">{CREATOR}</div>
                                                         <div class="col-4 grey-dark-text mb-0">UUID:</div>
                                                         <div class="col-12">
-                                                            <small>JTNVZTZKckQ7PjVWUjlMLCEyaEEzYyM=</small>
+                                                            <small>{UUID}</small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -235,7 +235,7 @@
                                                 <div class="container-fluid inbox-p0">
                                                     <div class="row">
                                                         <div class="col-4 grey-dark-text">Topic:</div>
-                                                        <div class="col-8">Example</div>
+                                                        <div class="col-8">{TOPIC}</div>
                                                         <div class="col-4 grey-dark-text">Label:</div>
                                                         <div class="col-8"><i class="fas fa-arrow-up red-text"></i> High</div>
                                                         <div class="col-4 grey-dark-text">Label:</div>
@@ -245,9 +245,9 @@
                                                         <div class="col-4 grey-dark-text">Label:</div>
                                                         <div class="col-8"><i class="fas fa-circle grey-text"></i> Archived</div>
                                                         <div class="col-4 grey-dark-text">Created:</div>
-                                                        <div class="col-8">04.08.2018</div>
+                                                        <div class="col-8">{CREATE_DATE}</div>
                                                         <div class="col-4 grey-dark-text">Updated:</div>
-                                                        <div class="col-8">05.08.2018</div>
+                                                        <div class="col-8">{UPDATE_DATE}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -285,17 +285,26 @@
 <!-- TinyMCE -->
 <script type="text/javascript" src="/assets/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="/assets/js/tinymce/jquery.tinymce.min.js"></script>
+<!-- Bootstrap Handler -->
+<script type="text/javascript">
+    // Prevent jQuery UI dialog from blocking focusin
+    $(document).on('focusin', function(e) {
+        if ($(e.target).closest(".mce-window, .moxman-window").length) {
+            e.stopImmediatePropagation();
+        }
+    });
+
+</script>
 <script type="text/javascript">
     tinymce.init({
-        selector: 'div.tinymce',
+        selector: '#replyEdit',
         branding: false,
-        plugins: ["bbcode", "autoresize", "link", "textcolor", "colorpicker"],
+        plugins: ["bbcode", "autoresize", "link", "textcolor", "colorpicker", "code"],
         autoresize_bottom_margin: 1,
-        bbcode_dialect: "punbb",
         statusbar: false,
         menubar: false,
         resize: false,
-        toolbar: "undo redo | bold italic underline | cut copy paste | link unlink | forecolor | removeformat"
+        toolbar: "undo redo | bold italic underline | cut copy paste | link unlink | forecolor | removeformat | code"
     });
     tinymce.init({
         selector: 'div.tinymce-read',
@@ -356,7 +365,6 @@
             }
         ],
         click: function (el) {
-            console.log($(el).data("eid"));
             $('#ticketView').modal('show');
         },
         dropEl: function (el, target, source, sibling) {
@@ -379,6 +387,11 @@
             $(targetID).removeClass("unshown");
         });
     });
+</script>
+<script type="text/javascript">
+    function test(){
+        console.log(tinymce.activeEditor.getContent({format: 'bbcode'}));
+    }
 </script>
 </body>
 
