@@ -188,9 +188,6 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-12 mt-3">
-                                        &nbsp;
-                                    </div>
                                     <div class="col-12 mt-1">
                                         <button type="button" class="btn btn-success float-right" onclick="test()">Antworten <i class="fas fa-paper-plane fa-lg"></i></button>
                                     </div>
@@ -373,16 +370,14 @@
 
 <!-- Custom -->
 <script type="text/javascript">
-    $('#ticketView').data('bs.modal').handleUpdate();
-    $('#ticketUserInfo').on('hide.bs.collapse', function () {
-        $('#ticketUser').addClass("unshown");
-    }).on('show.bs.collapse', function () {
-        $('#ticketUser').removeClass("unshown");
-    });
-    $('#ticketInfoInfo').on('hide.bs.collapse', function () {
-        $('#ticketInfo').addClass("unshown");
-    }).on('show.bs.collapse', function () {
-        $('#ticketInfo').removeClass("unshown");
+    $('.collapse-btn').each(function () {
+        let target = $( this ).data('target');
+        let targetID = "#" + $( this ).attr('id');
+        $(target).on('hide.bs.collapse', function () {
+            $(targetID).addClass("unshown");
+        }).on('show.bs.collapse', function () {
+            $(targetID).removeClass("unshown");
+        });
     });
 </script>
 </body>
