@@ -17,6 +17,8 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="/assets/css/mdb.min.css" rel="stylesheet">
+    <!-- QuillJS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- jKanban -->
     <link href="/assets/css/jkanban.min.css" rel="stylesheet">
     <!-- Your custom styles -->
@@ -60,11 +62,11 @@
 <!-- /Navigation -->
 
 <!-- Ticket View -->
-<div class="modal fade right" id="ticketView" tabindex="-1" role="dialog" aria-labelledby="ticketLabel" aria-hidden="true" data-backdrop="false">
-    <div class="modal-dialog modal-full-height modal-lg" role="document">
+<div class="modal fade right" id="ticketView" tabindex="-1" role="dialog" aria-labelledby="ticketLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-full-height modal-right modal-lg" role="document">
         <div class="modal-content ">
             <div class="modal-header unique-color-dark white-text align-items-center">
-                <p class="heading lead mb-0"><i class="fas fa-eye"></i> Ticket View</p>
+                <p class="heading lead mb-0"><i class="fas fa-eye"></i> Ticket Overview</p>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">×</span>
                 </button>
@@ -73,11 +75,132 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-sm btn-red" type="button"><i class="fas fa-trash fa-lg"></i></button>
+                                            <div type="btn-group" role="group">
+                                                <button class="btn btn-indigo dropdown-toggle" id="labelDropdown" type="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">Label
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="labelDropdown">
+                                                    <a href="#" class="dropdown-item"><i class="fas fa-arrow-up red-text"></i> High</a>
+                                                    <a href="#" class="dropdown-item"><i class="fas fa-arrow-right orange-text"></i> Medium</a>
+                                                    <a href="#" class="dropdown-item"><i class="fas fa-arrow-down green-text"></i> Low</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="fas fa-circle grey-text"></i> Archived</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-indigo" type="button">Assign</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="tinymce-read">
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                                                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                                            <br/>
+                                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+                                                duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr/>
+                                    </div>
+                                    <div class="col-12 mt-1">
+                                        <button class="btn collapse-btn" id="ticketAnswer1" type="button" data-toggle="collapse"
+                                                data-target="#ticketAnswerFull1" aria-expanded="false" aria-controls="ticketAnswerFull1">
+                                            <i class="fas fa-angle-down"></i>
+                                        </button>
+                                        <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">Lapotor hat geantwortet - 04.08.2018 00:21 AM</h6>
+                                        <h6 class="d-inline-block float-right"><span class="badge badge-default float-right">Creator</span></h6>
+                                        <div class="collapse show" id="ticketAnswerFull1">
+                                            <div class="mt-0">
+                                                <div class="tinymce-read">
+                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                                        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                                                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                                        kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                                                    <br/>
+                                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                                        nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+                                                        duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-1">
+                                        <button class="btn collapse-btn" id="ticketAnswer2" type="button" data-toggle="collapse"
+                                                data-target="#ticketAnswerFull2" aria-expanded="false" aria-controls="ticketAnswerFull2">
+                                            <i class="fas fa-angle-down"></i>
+                                        </button>
+                                        <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">VerHext hat geantwortet - 04.08.2018 00:21 AM</h6>
+                                        <h6 class="d-inline-block float-right"><span class="badge badge-secondary float-right">Assignee</span></h6>
+                                        <div class="collapse show" id="ticketAnswerFull2">
+                                            <div class="mt-0">
+                                                <div class="tinymce-read">
+                                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                                        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                                                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                                                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                                        kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                                                    <br/>
+                                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                                        nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+                                                        duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3 pl-0">
+                                        <h4>Antworten:</h4>
+                                    </div>
+                                    <div class="col-12 px-0">
+                                        <div class="tinymce">
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+                                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                                et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                                                sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                                                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                                                nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+                                                duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        &nbsp;
+                                    </div>
+                                    <div class="col-12 mt-1">
+                                        <button type="button" class="btn btn-success float-right" onclick="test()">Antworten <i class="fas fa-paper-plane fa-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="container-fluid" id="#ticketOverview">
+                            <div class="container-fluid sticky-top" id="#ticketOverview">
                                 <div class="row">
-                                    <div class="col-12 inbox-p0">
+                                    <div class="col-12">
                                         <div class="align-items-center">
                                             <button class="btn collapse-btn" id="ticketUser" type="button" data-toggle="collapse"
                                                     data-target="#ticketUserInfo" aria-expanded="false" aria-controls="ticketUserInfo">
@@ -87,22 +210,22 @@
                                         </div>
                                         <div class="collapse show" id="ticketUserInfo">
                                             <div class="mt-0">
-                                                <div class="container-fluid">
+                                                <div class="container-fluid inbox-p0">
                                                     <div class="row">
-                                                        <div class="col-4 grey-text">
-                                                            Assignee:
-                                                        </div>
-                                                        <div class="col-8">
-                                                            Lapotor
-                                                        </div>
-                                                        <div class="col-4 grey-text">Creator:</div>
+                                                        <div class="col-4 grey-dark-text">Assignee:</div>
                                                         <div class="col-8">Lapotor</div>
+                                                        <div class="col-4 grey-dark-text">Creator:</div>
+                                                        <div class="col-8">Lapotor</div>
+                                                        <div class="col-4 grey-dark-text mb-0">UUID:</div>
+                                                        <div class="col-12">
+                                                            <small>JTNVZTZKckQ7PjVWUjlMLCEyaEEzYyM=</small>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 inbox-p0 mt-2">
+                                    <div class="col-12 mt-2">
                                         <div class="align-items-center">
                                             <button class="btn collapse-btn" id="ticketInfo" type="button" data-toggle="collapse"
                                                     data-target="#ticketInfoInfo" aria-expanded="false" aria-controls="ticketInfoInfo">
@@ -112,14 +235,22 @@
                                         </div>
                                         <div class="collapse show" id="ticketInfoInfo">
                                             <div class="mt-0">
-                                                <div class="container-fluid">
+                                                <div class="container-fluid inbox-p0">
                                                     <div class="row">
-                                                        <div class="col-4 grey-text">Topic:</div>
-                                                        <div class="col-8">
-                                                            Example
-                                                        </div>
-                                                        <div class="col-4 grey-text">Label:</div>
-                                                        <div class="col-8">Medium</div>
+                                                        <div class="col-4 grey-dark-text">Topic:</div>
+                                                        <div class="col-8">Example</div>
+                                                        <div class="col-4 grey-dark-text">Label:</div>
+                                                        <div class="col-8"><i class="fas fa-arrow-up red-text"></i> High</div>
+                                                        <div class="col-4 grey-dark-text">Label:</div>
+                                                        <div class="col-8"><i class="fas fa-arrow-right orange-text"></i> Medium</div>
+                                                        <div class="col-4 grey-dark-text">Label:</div>
+                                                        <div class="col-8"><i class="fas fa-arrow-down green-text"></i> Low</div>
+                                                        <div class="col-4 grey-dark-text">Label:</div>
+                                                        <div class="col-8"><i class="fas fa-circle grey-text"></i> Archived</div>
+                                                        <div class="col-4 grey-dark-text">Created:</div>
+                                                        <div class="col-8">04.08.2018</div>
+                                                        <div class="col-4 grey-dark-text">Updated:</div>
+                                                        <div class="col-8">05.08.2018</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -140,6 +271,7 @@
 
 <div id="Tickets"></div>
 
+
 <!-- /Kanban -->
 <!-- /Content -->
 
@@ -152,6 +284,34 @@
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+
+<!-- TinyMCE -->
+<script type="text/javascript" src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: 'div.tinymce',
+        branding: false,
+        plugins: ["bbcode", "autoresize", "link", "textcolor", "colorpicker"],
+        autoresize_bottom_margin: 1,
+        bbcode_dialect: "punbb",
+        statusbar: false,
+        menubar: false,
+        resize: false,
+        toolbar: "undo redo | bold italic underline | cut copy paste | link unlink | forecolor | removeformat"
+    });
+    tinymce.init({
+        selector: 'div.tinymce-read',
+        branding: false,
+        readonly: 1,
+        plugins: "autoresize",
+        autoresize_bottom_margin: 1,
+        toolbar: false,
+        resize: false,
+        statusbar: false,
+        menubar: false,
+    });
+</script>
+
 <!-- jKanban -->
 <script type="text/javascript" src="/assets/js/jkanban.js"></script>
 <script type="text/javascript">
@@ -169,12 +329,20 @@
                 "class": "amber,dark-text",
                 "item": [
                     {
+                        "id": "ticket-3",
+                        "title": "Ticket 3 <span class=\"badge badge-danger float-right\">High</span>"
+                    },
+                    {
                         "id": "ticket-1",
                         "title": "Ticket 1 <span class=\"badge badge-warning float-right\">Medium</span>"
                     },
                     {
                         "id": "ticket-2",
-                        "title": "Ticket 2<span class=\"badge badge-info float-right\">Low</span>"
+                        "title": "Ticket 2<span class=\"badge badge-success float-right\">Low</span>"
+                    },
+                    {
+                        "id": "ticket-4",
+                        "title": "Ticket 4<span class=\"badge badge-light float-right\">Archived</span>"
                     }
                 ]
             },
@@ -190,13 +358,21 @@
             }
         ],
         click: function (el) {
+            console.log($(el).data("eid"));
             $('#ticketView').modal('show');
+        },
+        dropEl: function (el, target, source, sibling) {
+            console.log(el);
+            console.log(target);
+            console.log(source);
+            console.log(sibling);
         }
     })
 </script>
 
 <!-- Custom -->
 <script type="text/javascript">
+    $('#ticketView').data('bs.modal').handleUpdate();
     $('#ticketUserInfo').on('hide.bs.collapse', function () {
         $('#ticketUser').addClass("unshown");
     }).on('show.bs.collapse', function () {

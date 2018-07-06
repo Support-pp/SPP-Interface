@@ -107,25 +107,42 @@ html {
     }
     .collapse-btn {
       margin: 0 0 0 -1.85rem;
-      transition: 500ms ease;
+      transition: 200ms ease-out;
       padding: 0 5.72px;
       box-shadow: none;
       background-color: #dcdcdc;
       color: #000;
-      &.unshown {
-        transition: 500ms ease;
+      &.unshown{
+        transition: 200ms ease-in;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         -o-transform: rotate(-90deg);
         transform: rotate(-90deg);
       }
+      &:active, &:hover, &:focus {
+        box-shadow: none;
+      }
+    }
+    .grey-dark-text {
+      color: #757575;
+    }
+    .modal .modal-full-height {
+      height: auto;
+      min-height: 100%;
     }
   }
 }
 
 // IDs
-#ticketOverview .inbox-p0 div[class^='col-'] {
+.inbox-p0 div[class^="col-"] {
   padding-left: 0;
   margin-bottom: .25rem;
+}
+.ql-editor  strong{
+  font-weight: bold;
+}
+
+iframe #tinymce {
+  background-color: rgba(158,158,158,.1);
 }
