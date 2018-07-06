@@ -17,5 +17,8 @@ Bootstrap require Popper.JS so we use it together with Bootstrap and it is licen
 ## jKanban
 We use jKanban to let you drag and drop tickets between states. jKanban is licensed under the terms of the [Apache License 2.0](https://github.com/riktar/jkanban/blob/master/LICENSE)
 
+## TinyMCE
+We use TinyMCE to let you answer tickets quickly and fancy. TinyMCE is licensed under the terms of the [LGPL-2.1](https://github.com/tinymce/tinymce/blob/master/LICENSE.TXT)
+
 ---
 Everything else is licensed under the terms which can be found in the [LICENSE.md](/LICENSE.md).
