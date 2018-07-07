@@ -69,7 +69,11 @@ function addStarRating() {
                 let ratingWrapper = document.createElement("div");
                 ratingWrapper.classList.add("ml-2");
                 ratingWrapper.classList.add("d-inline-block");
-                $(ratingWrapper).html(rating.toString().replace(".", ","));
+                rating = rating.toString();
+                if (rating.length < 4 && rating.length > 2){
+                    rating += "0";
+                }
+                $(ratingWrapper).html(rating.replace(".", ","));
 
                 starUserWrapper.appendChild(starWrapper);
                 starUserWrapper.appendChild(userWrapper);
