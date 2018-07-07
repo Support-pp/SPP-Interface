@@ -37,7 +37,7 @@
 <!-- /Version Info -->
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark unique-color-dark">
+<nav class="navbar navbar-expand-lg navbar-dark unique-color-dark sticky-top">
     <a href="https://support-pp.de/" class="navbar-brand px-lg-4 mr-0 white-text"><img src="/assets/img/icon.png" height="30" alt=""/><span
             class="d-inline d-lg-none"> Support++</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headNav" aria-controls="headNav" aria-expanded="false"
@@ -49,24 +49,181 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="./tickets.html" class="nav-link">Tickets</a></li>
-            <li class="nav-item active"><a href="#" class="nav-link">Feedback <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active"><a href="./feedback.html" class="nav-link">Feedback <span class="sr-only">(current)</span></a></li>
             <li class="nav-item"><a href="./info.html" class="nav-link"><i class="fas fa-info"></i> Info</a></li>
             <li class="nav-item"><a href="#" class="nav-link disabled"><i class="far fa-life-ring"></i> Remote Help</a></li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item avatar white-text">
-                <div class="d-inline mr-3">{USERNAME}</div><img src="/assets/img/testUser.png" class="rounded-circle z-depth-0" alt="avatar image" height="35px">
+                <div class="d-inline mr-3" style="color: #ff5252">{USERNAME}</div>
+                <img src="/assets/img/testUser.png" class="rounded-circle z-depth-0" alt="avatar image" height="35px">
             </li>
         </ul>
     </div>
 </nav>
 <!-- /Navigation -->
 
-<div class="container mt-4">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12 star-rating" data-user="5" data-rating="3.67">
+        <div class="col-12 my-4">
+            <div class="card">
+                <div class="card-header indigo white-text">General Overview</div>
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <h3 class="d-inline-block">All in all: </h3>
+                                <div class="d-inline-block h3">
+                                    <div class="star-rating" data-user="1034" data-rating="3.67"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 pl-4">
+                                <div class="align-items-center">
+                                    <button class="btn collapse-btn" id="allQuest" type="button" data-toggle="collapse"
+                                            data-target="#allQuestInfo" aria-expanded="false" aria-controls="allQuestInfo">
+                                        <i class="fas fa-angle-down"></i>
+                                    </button>
+                                    <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">All questions</h6>
+                                </div>
+                                <div class="collapse show" id="allQuestInfo">
+                                    <div class="mt-0">
+                                        <div class="container-fluid inbox-p0">
+                                            <div class="row">
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION1}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION2}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION3}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION4}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-12 star-rating" data-user="4" data-rating="4.2">
+        <div class="col-12 my-4">
+            <div class="card">
+                <div class="card-header indigo white-text">Per User Overview</div>
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 pl-4 my-4">
+                                <div class="align-items-center">
+                                    <button class="btn collapse-btn unshown" id="userQuest0" type="button" data-toggle="collapse"
+                                            data-target="#userQuestInfo0" aria-expanded="false" aria-controls="userQuestInfo0">
+                                        <i class="fas fa-angle-down"></i>
+                                    </button>
+                                    <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">{USERNAME}</h6>
+                                </div>
+                                <div class="collapse" id="userQuestInfo0">
+                                    <div class="mt-0">
+                                        <div class="container-fluid inbox-p0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h3 class="d-inline-block">All in all: </h3>
+                                                    <div class="d-inline-block h3">
+                                                        <div class="star-rating" data-user="623" data-rating="4.3"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION1}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION2}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION3}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION4}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 pl-4 my-4">
+                                <div class="align-items-center">
+                                    <button class="btn collapse-btn unshown" id="userQuest1" type="button" data-toggle="collapse"
+                                            data-target="#userQuestInfo1" aria-expanded="false" aria-controls="userQuestInfo1">
+                                        <i class="fas fa-angle-down"></i>
+                                    </button>
+                                    <h6 class="d-inline-block font-weight-bold mb-0 ml-1" style="line-height: 1.6;">{USERNAME}</h6>
+                                </div>
+                                <div class="collapse" id="userQuestInfo1">
+                                    <div class="mt-0">
+                                        <div class="container-fluid inbox-p0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h3 class="d-inline-block">All in all: </h3>
+                                                    <div class="d-inline-block h3">
+                                                        <div class="star-rating" data-user="623" data-rating="4.3"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION1}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION2}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION3}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                                <div class="col-12"><hr/></div>
+                                                <div class="col-12 col-md-8 col-lg-9 col-xl-10 grey-dark-text text-justify">
+                                                    {QUESTION4}:
+                                                </div>
+                                                <div class="col-12 col-md-4 col-lg-3 col-xl-2 star-rating pl-2 align-items-end" data-user="1034"
+                                                     data-rating="3.67"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -83,6 +240,7 @@
 <script type="text/javascript" src="./assets/js/mdb.min.js"></script>
 
 <!-- Custom -->
+<script type="text/javascript" src="./assets/js/collapseBtn.min.js"></script>
 <script type="text/javascript" src="./assets/js/starRating.js"></script>
 </body>
 

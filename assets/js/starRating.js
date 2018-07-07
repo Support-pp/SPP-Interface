@@ -11,6 +11,15 @@
  * Project: Support++ Webinterface
  */
 
+
+/*!
+ * <div class="col-12 star-rating" data-user="5" data-rating="3.67">
+ * </div>
+ * <div class="col-12 star-rating" data-user="4" data-rating="4.2">
+ * </div>
+ */
+
+
 function addStarRating() {
     $('.star-rating').each(function () {
         let users = $( this ).data('user');
