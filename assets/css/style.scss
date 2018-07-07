@@ -134,6 +134,12 @@ html {
       height: auto;
       min-height: 100%;
     }
+    nav{
+      div .dropdown-item.active{
+        background-color: #1c2331;
+        color: #fff !important;
+      }
+    }
   }
 }
 
