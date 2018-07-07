@@ -27,7 +27,7 @@
 
 <!-- Content -->
 <!-- Version Info -->
-<div class="container-fluid warning-color-dark white-text font-weight-bold py-2">
+<div class="container-fluid warning-color-dark white-text font-weight-bold py-2 d-none">
     <div class="row">
         <div class="col-12 text-center">Please update to our latest stable version {VERSION}
             <a href="https://github.com/Support-pp/Support-pp/releases/latest" target="_blank _parent" class="btn btn-indigo white-text btn-sm ml-3">
@@ -57,7 +57,7 @@
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item avatar white-text">
-                <div class="d-inline mr-3">{USERNAME}</div><img src="./assets/img/testUser.png" class="rounded-circle z-depth-0" alt="avatar image" height="35px">
+                <div id="nickname-js" class="d-inline mr-3"></div><img src="./assets/img/testUser.png" class="rounded-circle z-depth-0" alt="avatar image" height="35px">
             </li>
         </ul>
     </div>
@@ -383,6 +383,8 @@
         console.log(tinymce.activeEditor.getContent({format: 'bbcode'}));
     }
 </script>
+<script type="text/javascript" src="./assets/js/backend/user.js"></script>
+<script type="text/javascript" src="./assets/js/backend/version.js"></script>
 </body>
 
 </html>
