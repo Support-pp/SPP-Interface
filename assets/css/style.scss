@@ -141,4 +141,11 @@ html {
 .inbox-p0 div[class^="col-"] {
   padding-left: 0;
   margin-bottom: .25rem;
-  }
+}
+.ql-editor  strong{
+  font-weight: bold;
+}
+
+iframe #tinymce {
+  background-color: rgba(158,158,158,.1);
+}
